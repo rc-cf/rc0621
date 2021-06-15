@@ -1,6 +1,5 @@
 package programming.demo;
 
-import programming.demo.display.TextDisplay;
 import programming.demo.exception.InvalidDiscountException;
 import programming.demo.exception.InvalidRentalDayCountException;
 import programming.demo.model.RentalAgreement;
@@ -8,8 +7,6 @@ import programming.demo.model.enumeration.ToolCode;
 import programming.demo.service.RentalService;
 
 import java.time.LocalDate;
-
-import static programming.demo.model.enumeration.ToolCode.*;
 
 public class ProgrammingDemo {
 
