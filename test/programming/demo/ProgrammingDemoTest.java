@@ -1,6 +1,7 @@
 package programming.demo;
 
 import org.junit.Test;
+import programming.demo.exception.InvalidDateException;
 import programming.demo.exception.InvalidDiscountException;
 import programming.demo.exception.InvalidRentalDayCountException;
 import programming.demo.model.RentalAgreement;

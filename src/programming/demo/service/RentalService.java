@@ -1,5 +1,6 @@
 package programming.demo.service;
 
+import programming.demo.exception.InvalidDateException;
 import programming.demo.exception.ToolNotFoundException;
 import programming.demo.model.ChargeInformation;
 import programming.demo.model.RentalAgreement;
@@ -105,7 +106,8 @@ public class RentalService {
         LocalDate septemberEighth = LocalDate.of(year, 9, 8);
 
         return septemberFirst.datesUntil(septemberEighth)
-                .filter(date -> date.getDayOfWeek() == DayOfWeek.MONDAY).findFirst().get();
+                .filter(date -> date.getDayOfWeek() == DayOfWeek.MONDAY).findFirst()
+                .orElseThrow(InvalidDateException::new);
     }
 
     private LocalDate getIndependenceDay(int year) {
